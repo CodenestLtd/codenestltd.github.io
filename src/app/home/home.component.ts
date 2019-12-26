@@ -1,19 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { ChallengeService } from '../challenge.service';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-complete',
-  templateUrl: './services.component.html',
-  styleUrls: ['./services.component.scss']
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss']
 })
-export class ServicesComponent implements OnInit {
+export class HomeComponent implements OnInit {
   headerTitle = 'Complete';
 
-  constructor(private challengeService: ChallengeService) {}
+  constructor() {
+  }
 
   completeMessage: string;
 
-  ngOnInit() {
-    this.completeMessage = this.challengeService.getCompleteMessage();
+  ngOnInit(): void {
   }
 }

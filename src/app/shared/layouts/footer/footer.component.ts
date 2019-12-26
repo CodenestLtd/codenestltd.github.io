@@ -1,19 +1,15 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
-import { Location } from '@angular/common';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.scss']
 })
-export class HeaderComponent implements OnInit {
-  @Input() title: string;
-  @Input() showBackButton: boolean;
+export class FooterComponent implements OnInit {
 
-  @Output() goBack = new EventEmitter<void>();
+  constructor() {
+  }
 
-  constructor(private location: Location) {}
-
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }

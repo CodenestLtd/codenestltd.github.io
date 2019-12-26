@@ -2,14 +2,53 @@
 @include mat-core();
 @import 'variables';
 
-html,
-body {
-  height: 100%;
-}
-body {
+* {
   margin: 0;
-  display: flex;
-  font-family: Helvetica, 'Helvetica Neue', 'Roboto', sans-serif;
+  padding: 0;
+  box-sizing: border-box
+}
+
+body, html {
+  min-width: 320px;
+  overflow-x: hidden
+}
+
+body {
+  font-family: Roboto, sans-serif;
+  margin-bottom: -20px
+}
+
+body._open {
+  overflow: auto;
+  position: fixed;
+  left: 0;
+  right: 0
+}
+
+
+.free-quote-responsive {
+  display: none;
+  float: right;
+  margin-right: 110px;
+  position: relative;
+  top: 7px
+}
+
+.free-quote-menu {
+  display: none
+}
+
+@media (max-width: 1024px) {
+  .free-quote-responsive {
+    display: block;
+    margin-right: 100px
+  }
+}
+
+@media (max-width: 455px) {
+  .free-quote-menu {
+    display: list-item
+  }
 }
 
 // Defining the theme - This can be updated to be dynamic in future:
@@ -53,9 +92,9 @@ $onboarding-app-primary: mat-palette($custom-theme);
 $onboarding-app-accent: mat-palette($custom-theme, A100, A100, A100);
 $onboarding-app-warn: mat-palette($custom-theme, A200, A200, A200);
 $onboarding-app-theme: mat-light-theme(
-  $onboarding-app-primary,
-  $onboarding-app-accent,
-  $onboarding-app-warn
+    $onboarding-app-primary,
+    $onboarding-app-accent,
+    $onboarding-app-warn
 );
 @include angular-material-theme($onboarding-app-theme);
 

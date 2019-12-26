@@ -1,43 +1,32 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import {NgModule} from '@angular/core';
+import {CommonModule} from '@angular/common';
 
-import { AppHeaderComponent } from './layouts/app-header/app-header.component';
-import { NgMatModule } from './modules/ngmat.module';
-import { DialogComponent } from './layouts/dialog/dialog.component';
-import { AuthStateService } from './state/auth-state.service';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
-import { AuthTokenInterceptor } from './interceptors/auth.token.interceptor';
-import { HttpBaseUrlInterceptor } from './interceptors/http.base.url.interceptor';
-import { environment } from 'src/environments/environment';
-import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-import { InMemoryOnboardingService } from './api/in-memory-onboarding.service';
-import { ErrorComponent } from './components/error/error.component';
-
-const share = [AppHeaderComponent, DialogComponent, ErrorComponent];
+import {HeaderComponent} from './layouts/header/header.component';
+import {NgMatModule} from './modules/ngmat.module';
+import {DialogComponent} from './layouts/dialog/dialog.component';
+import {HttpClientModule} from '@angular/common/http';
+import {ErrorComponent} from './components/error/error.component';
+import {FooterComponent} from "./layouts/footer/footer.component";
 
 @NgModule({
-  declarations: share,
-  exports: share,
+  declarations: [
+    HeaderComponent,
+    FooterComponent,
+    DialogComponent,
+    ErrorComponent
+  ],
+  exports: [
+    HeaderComponent,
+    FooterComponent,
+    DialogComponent,
+    ErrorComponent
+  ],
   imports: [
     CommonModule,
     NgMatModule,
-    HttpClientModule,
-    environment.mockApi
-      ? HttpClientInMemoryWebApiModule.forRoot(InMemoryOnboardingService)
-      : []
+    HttpClientModule
   ],
-  providers: [
-    AuthStateService,
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: AuthTokenInterceptor,
-      multi: true
-    },
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HttpBaseUrlInterceptor,
-      multi: true
-    }
-  ]
+  providers: []
 })
-export class SharedModule {}
+export class SharedModule {
+}
