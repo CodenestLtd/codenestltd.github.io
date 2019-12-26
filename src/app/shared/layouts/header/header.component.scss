@@ -1,0 +1,40 @@
+@import 'default-layout';
+
+h3 {
+  font-weight: 700;
+}
+
+.AppHeader {
+  width: 100vw;
+  z-index: 1000;
+  color: $header-color;
+  background-color: $header-background-color;
+  border-top: 5px solid $primary;
+}
+
+.AppHeader-title {
+  height: auto;
+  font-size: 24px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.AppHeader-left {
+  cursor: pointer;
+  margin-right: auto;
+  flex: 1;
+}
+
+.AppHeader-right {
+  padding: 0;
+  flex: 1;
+}
+
+.AppHeader-back-button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  border-radius: 100%;
+  padding-left: 15px;
+}
