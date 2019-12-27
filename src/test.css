@@ -13100,41 +13100,6 @@ input:-webkit-autofill {
   }
 }
 
-.content.privacy-policy {
-  padding: 20px 40px
-}
-
-.content.privacy-policy .emerline-description_wrapper__text p {
-  white-space: pre-wrap;
-  margin-top: 0
-}
-
-.content.privacy-policy .emerline-description_wrapper__text ul {
-  white-space: pre-wrap;
-  padding-left: 40px
-}
-
-@media all and (max-width: 768px) {
-  .content.privacy-policy {
-    padding: 20px 15px
-  }
-}
-
-@media (max-width: 530px) {
-  .main-footer .content {
-    position: relative;
-    padding-bottom: 30px
-  }
-
-  .main-footer .content .main-footer_logo-wrapper {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    margin: 0
-  }
-}
-
 .cc-color-override--1762072787 .cc-btn.cc-dismiss {
   font-size: 13px;
   font-weight: 500;

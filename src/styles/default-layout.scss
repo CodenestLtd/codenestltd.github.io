@@ -4,30 +4,6 @@
   color: $primary;
 }
 
-p {
-  text-align: justify;
-}
-
-.mat-card-title {
-  font-size: 26px;
-  line-height: 28px;
-}
-
-.mat-flat-button {
-  font-size: 18px;
-  min-width: 120px;
-}
-
-.mat-card {
-  margin: auto;
-  display: flex;
-  align-items: left;
-  flex-direction: column;
-  justify-content: space-between;
-  max-width: 600px;
-  padding: 24px;
-}
-
 @media (max-height: 800px) {
   .mat-card {
     height: 80vh;

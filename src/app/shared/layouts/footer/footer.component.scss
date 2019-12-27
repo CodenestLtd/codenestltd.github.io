@@ -1,31 +1,32 @@
 @import 'default-layout';
 
-.main-footer {
+footer {
   padding: 33px 20px 15px;
   background-image: linear-gradient(0deg, #333, #333)
 }
 
-.main-footer .content {
+footer .content {
   width: 100%;
   max-width: 1200px
 }
 
-.main-footer .copyright-block_resp, .main-footer .follow-us.tablet {
+footer .copyright-block_resp, footer .follow-us.tablet {
   display: none
 }
 
-.main-footer_logo {
+footer_logo {
   display: inline-block;
   position: relative;
   left: -7px
 }
 
-.main-footer_logo-wrapper {
+.logo-wrapper {
   width: 22%;
-  display: inline-block
+  display: inline-block;
+  padding-top: 9px;
 }
 
-.main-footer_menu {
+.footer-menu {
   position: relative;
   top: 18px;
   list-style-type: none;
@@ -34,34 +35,34 @@
   vertical-align: top
 }
 
-.main-footer_menu-item {
+.footer-menu-item {
   display: inline-block;
   vertical-align: top;
   position: relative;
   width: 16%
 }
 
-.main-footer_menu-item:first-child {
+.footer-menu-item:first-child {
   width: 20%
 }
 
-.main-footer_menu-item-link {
+.footer-menu-item-link {
   font-weight: 500;
   font-size: 16px;
   color: #c4c3c3;
   text-decoration: none
 }
 
-.main-footer_menu-item-link.__active {
+.footer-menu-item-link.__active {
   color: #fffefe
 }
 
-.main-footer_sub-menu {
+.footer-sub-menu {
   list-style-type: none;
   margin-top: 25px
 }
 
-.main-footer_sub-menu-item {
+.sub-menu-item {
   list-style-type: none;
   font-weight: 300;
   color: #fefefe;
@@ -70,25 +71,25 @@
   letter-spacing: .26px
 }
 
-.main-footer_sub-menu-item a {
+.sub-menu-item a {
   color: #fefefe;
   text-decoration: none
 }
 
-.main-footer_sub-menu-item a:hover {
+.sub-menu-item a:hover {
   text-decoration: underline
 }
 
-.main-footer_sub-menu-item.privacy-policy {
+.sub-menu-item.privacy-policy {
   margin: 10px 0 0;
   font-size: 14px
 }
 
-.main-footer .copyright-block {
+footer .copyright-block {
   margin-top: 68px
 }
 
-.main-footer .copyright-block .copyright-text {
+footer .copyright-block .copyright-text {
   white-space: pre;
   font-size: 10px;
   color: #ccc;
@@ -96,43 +97,69 @@
   font-weight: 500
 }
 
-.main-footer .contact-links-wrapper {
+footer .contact-links-wrapper {
   margin-top: 30px
 }
 
-.main-footer .contact-links-wrapper a {
+footer .contact-links-wrapper a {
   text-decoration: none;
   color: #fff;
   margin-left: 10px
 }
 
-.main-footer .contact-links-wrapper p {
+footer .contact-links-wrapper p {
   font-size: 14px;
   color: #fff;
   line-height: 24px
 }
 
-.main-footer .contact-links-wrapper h4 {
+footer .contact-links-wrapper h4 {
   font-size: 16px;
   margin-bottom: 8px;
   color: #ccc;
   font-weight: 400
 }
 
+.content.privacy-policy {
+  padding: 20px 40px
+}
+
+@media all and (max-width: 768px) {
+  .content.privacy-policy {
+    padding: 20px 15px
+  }
+}
+
+@media (max-width: 530px) {
+  footer .content {
+    position: relative;
+    padding-bottom: 30px
+  }
+
+  footer .content .logo-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    margin: 0
+  }
+}
+
+
 @media (max-width: 1024px) {
-  .main-footer {
+  footer {
     padding: 20px 0
   }
 
-  .main-footer_menu {
+  .footer-menu {
     display: none
   }
 
-  .main-footer .copyright-block_resp, .main-footer .follow-us.tablet {
+  footer .copyright-block_resp, footer .follow-us.tablet {
     display: inline-block
   }
 
-  .copyright-block, .main-footer_logo, .mobile {
+  .copyright-block, .footer-logo, .mobile {
     display: none
   }
 
@@ -140,7 +167,7 @@
     margin-top: 0 !important
   }
 
-  .follow-us, .main-footer_logo-wrapper {
+  .follow-us, .logo-wrapper {
     margin: 0 4%
   }
 
@@ -187,7 +214,7 @@
 }
 
 @media (max-width: 760px) {
-  .main-footer_logo-wrapper {
+  .logo-wrapper {
     width: 30%;
     margin-right: 0
   }
@@ -203,7 +230,7 @@
 }
 
 @media (max-width: 650px) {
-  .main-footer_logo-wrapper {
+  .logo-wrapper {
     width: 34%
   }
 
@@ -213,25 +240,25 @@
 }
 
 @media (max-width: 530px) {
-  .main-footer .follow-us {
+  footer .follow-us {
     width: 100%;
     text-align: center
   }
 
-  .main-footer .follow-us h4, .main-footer .follow-us.tablet {
+  footer .follow-us h4, footer .follow-us.tablet {
     display: none
   }
 
-  .main-footer .follow-us.mobile {
+  footer .follow-us.mobile {
     display: block;
     margin: 0
   }
 
-  .main-footer .follow-us .social-networks li {
+  footer .follow-us .social-networks li {
     margin-left: 0
   }
 
-  .main-footer .follow-us .social-networks li:nth-child(2) {
+  footer .follow-us .social-networks li:nth-child(2) {
     margin: 0 10px
   }
 
