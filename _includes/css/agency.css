@@ -4,10 +4,22 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
-body {
+body,
+html {
+    background-color: #fff;
+    color: #000;
+    font: 16px/170% InterWorks, -apple-system, linkMacSystemFont, Helvetica Neue, Segoe UI, Roboto, Arial, sans-serif;
+    font-weight: 400;
+    max-width: 100%;
+    min-width: 320px;
     overflow-x: hidden;
-    font-family: "Roboto Slab","Helvetica Neue",Helvetica,Arial,sans-serif;
-    color: #{{ site.data.template.color.secondary-dark }};
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale
+}
+
+html {
+    -ms-overflow-style: scrollbar;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
 .text-muted {
@@ -658,7 +670,6 @@ aside.clients img {
 
 section#contact {
     background-color: #222;
-    background-image: url('{{ site.baseurl }}/img/map-image.png');
     background-position: center;
     background-repeat: no-repeat;
 }
@@ -724,6 +735,307 @@ section#contact .text-danger {
 footer {
     padding: 25px 0;
     text-align: center;
+    color: black;
+    border-top: 1px solid #eaeaea;
+}
+
+footer .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 6vw;
+    padding-right: 6vw;
+    width: 100%;
+    max-width: 1760px;
+    position: relative;
+    z-index: 1;
+}
+
+footer .cta {
+    border-bottom: 1px solid #222;
+    display: block;
+    padding: 80px 0;
+    text-align: center
+}
+
+footer .cta .title {
+    font-family: InterWorks Medium;
+    font-size: calc(26px + 12 * ((100vw - 420px) / 860));
+    font-size: calc(1.625rem + 12 * ((100vw - 26.25rem) / 860));
+    line-height: 1.055em;
+    display: block;
+    letter-spacing: -.022em;
+    padding: 0 0 30px
+}
+
+footer .cta .button {
+    display: block
+}
+
+footer .cta .button a {
+    font-family: Space Mono, monospace;
+    border-radius: 40px;
+    display: inline-block;
+    font-size: 12px;
+    line-height: 1.2em;
+    font-size: .75rem;
+    font-weight: 700;
+    letter-spacing: .025em;
+    min-height: 60px;
+    min-width: 200px;
+    overflow: hidden;
+    padding: 21px 30px 0;
+    position: relative;
+    transition: all .6s ease .1s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+footer .cta .button a:before {
+    background-color: transparent;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 25px 20px;
+    content: "";
+    margin: auto 0;
+    opacity: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: auto;
+    position: absolute;
+    width: 25px;
+    height: 20px;
+    transition: all .5s ease 0s
+}
+
+footer .cta .button a {
+    background-color: #e88305;
+    color: #fff
+}
+
+footer .cta .button a:before {
+    background-image: url(../img/button-arrow--white.svg)
+}
+
+footer .cta .button a {
+    margin: 0 auto;
+    text-align: center
+}
+
+footer section.bottom {
+    border-color: #eaeaea;
+    border-top: 1px solid #eaeaea;
+    display: block;
+    padding: 50px 0 30px;
+    position: relative;
+    text-align: center;
+}
+
+footer section.bottom .social {
+    display: block;
+    margin: 0 auto 25px;
+    text-align: center;
+}
+
+footer .main section.top {
+    padding: 0px 0;
+    display: block;
+    text-align: center
+}
+
+footer .main section.top nav {
+    display: block;
+    margin: 30px auto 55px
+}
+
+footer .main section.top nav ul {
+    font-size: 0
+}
+
+footer .main section.top nav li {
+    font-family: Space Mono, monospace;
+    font-size: 12px;
+    line-height: .9em;
+    font-size: .75rem;
+    display: block;
+    font-weight: 700
+}
+
+footer .main section.top nav li:not(:last-of-type) {
+    margin-bottom: 28px
+}
+
+footer .main section.top nav a {
+    color: #747474;
+    transition: color .15s cubic-bezier(.77, 0, .175, 1)
+}
+
+footer .main section.top nav a:hover {
+    color: #ff6100
+}
+
+footer .main section.bottom {
+    border-top: 1px solid #222;
+    display: block;
+    padding: 50px 0 30px;
+    position: relative;
+    text-align: center
+}
+
+footer .main section.bottom .social {
+    display: block;
+    margin: 0 auto 25px;
+    text-align: center
+}
+
+footer .main section.bottom .social ul.social-links li {
+    border-color: #222;
+    margin: 0 5px
+}
+
+footer .main section.bottom .social ul.social-links svg path {
+    fill: #fff
+}
+
+footer .main section.bottom .partner-logo {
+    flex: 0 1 auto;
+    margin: 0 auto 40px;
+    text-align: center
+}
+
+footer .main section.bottom .partner-logo a {
+    display: inline-block
+}
+
+footer .main section.bottom .partner-logo svg {
+    display: inline-block;
+    width: 155px;
+    height: 42px
+}
+
+footer .main section.bottom .footnote {
+    align-items: center;
+    display: flex;
+    font-size: 0;
+    justify-content: space-between
+}
+
+footer .main section.bottom .footnote span {
+    display: block;
+    font-size: 14px;
+    line-height: 1.525em;
+    font-size: .875rem
+}
+
+footer .main section.bottom .footnote,
+footer .main section.bottom .footnote a,
+footer .main section.bottom .footnote span {
+    color: #747474!important;
+    pointer-events: none!important
+}
+
+footer .main section.bottom .scroll-up {
+    background: transparent;
+    border-left: 1px solid #222;
+    display: none;
+    margin: auto 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    position: absolute;
+    width: 190px;
+    height: 100%;
+    transition: all .3s cubic-bezier(.77, 0, .175, 1);
+    z-index: 1
+}
+
+footer .main section.bottom .scroll-up:hover {
+    background-color: #222
+}
+
+footer .main section.bottom .scroll-up svg {
+    display: inline-block;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 26px;
+    height: 15px
+}
+
+footer .main section.bottom .scroll-up svg path {
+    stroke: #fff
+}
+
+footer {
+    background-color: #fff;
+    color: #000
+}
+
+footer .cta {
+    border-color: #eaeaea
+}
+
+footer .main section.top nav a:not(:hover) {
+    color: #000
+}
+
+footer .main section.bottom {
+    border-color: #eaeaea
+}
+
+footer .main section.bottom .social ul.social-links li:not(.focus):not(.no-focus) a {
+    border-color: #f3f3f3
+}
+
+footer .main section.bottom .social ul.social-links li:not(.focus):not(.no-focus) svg path {
+    fill: #000
+}
+
+footer .main section.bottom .social ul.social-links li.focus a {
+    background: #f3f3f3;
+    border-color: #f3f3f3
+}
+
+footer .main section.bottom .social ul.social-links li.focus svg path {
+    fill: #000
+}
+
+footer .main section.bottom .social ul.social-links li.no-focus a {
+    border-color: #f3f3f3
+}
+
+footer .main section.bottom .social ul.social-links li.no-focus svg path {
+    fill: #eaeaea
+}
+
+footer .main section.bottom .scroll-up {
+    border-color: #eaeaea
+}
+
+footer .main section.bottom .scroll-up svg path {
+    stroke: #000
+}
+
+footer .main section.bottom .scroll-up:hover {
+    background-color: #f3f3f3
+}
+
+@media(min-width: 961px) {
+    footer section.bottom .social {
+        justify-content: flex-end;
+        margin: auto 0;
+        top: 0;
+        bottom: 0;
+        left: 40px;
+        position: absolute;
+        text-align: left;
+        z-index: 1;
+    }
 }
 
 footer span.copyright {
@@ -743,6 +1055,11 @@ footer ul.quicklinks {
 
 ul.social-buttons {
     margin-bottom: 0;
+}
+
+ul.social-buttons li {
+    border-style: solid;
+    display: inline-block;
 }
 
 ul.social-buttons li a {
@@ -864,4 +1181,111 @@ img::-moz-selection {
 
 body {
     webkit-tap-highlight-color: #{{ site.data.template.color.primary }};
+}
+
+@media (min-width:961px) {
+    footer .cta .button a {
+        min-height: 70px;
+        min-width: 260px;
+        padding-left: 40px;
+        padding-right: 40px;
+        padding-top: 26px;
+        transition-delay: 0s
+    }
+    footer .cta .button a:hover {
+        padding-left: 20px;
+        padding-right: 60px
+    }
+    footer .cta .button a:hover:before {
+        right: 25px;
+        opacity: 1;
+        transition-delay: .1s
+    }
+    footer .cta {
+        border-bottom: 0 none
+    }
+    footer .main section .inner {
+        align-items: center;
+        display: flex;
+        justify-content: space-between
+    }
+
+    footer .main section.top nav {
+        margin: 0 auto;
+        text-align: center
+    }
+    footer .main section.top nav li {
+        display: inline-block;
+        font-size: 13px;
+        line-height: 3em;
+        font-size: .8125rem;
+        font-weight: 700;
+        margin-bottom: 0!important;
+        margin-left: 20px!important;
+        margin-right: 20px!important
+    }
+    footer .main section.top nav a {
+        color: #fff
+    }
+    footer .main section.top nav a:hover {
+        color: #ff6100
+    }
+    footer .main section.bottom {
+        padding: 30px 0
+    }
+    footer .main section.bottom .inner {
+        height: 50px
+    }
+    footer .main section.bottom .social {
+        justify-content: flex-end;
+        margin: auto 0;
+        top: 0;
+        bottom: 0;
+        left: 40px;
+        position: absolute;
+        text-align: left;
+        z-index: 1
+    }
+    footer .main section.bottom .social ul.social-links li:last-of-type {
+        margin-right: 0
+    }
+    footer .main section.bottom .social ul.social-links li:not(.focus):not(.no-focus) a {
+        border-color: #222
+    }
+    footer .main section.bottom .social ul.social-links li:not(.focus):not(.no-focus) svg path {
+        fill: #fff
+    }
+    footer .main section.bottom .social ul.social-links li.focus a {
+        background: #222;
+        border-color: #222
+    }
+    footer .main section.bottom .social ul.social-links li.focus svg path {
+        fill: #fff
+    }
+    footer .main section.bottom .social ul.social-links li.no-focus a {
+        border-color: #222
+    }
+    footer .main section.bottom .social ul.social-links li.no-focus svg path {
+        fill: #222
+    }
+    footer .main section.bottom .partner-logo {
+        margin: 0;
+        top: 0;
+        right: 40px;
+        bottom: 0;
+        position: absolute;
+        text-align: right;
+        z-index: 1
+    }
+    footer .main section.bottom .footnote {
+        display: block;
+        text-align: center;
+        width: 100%
+    }
+}
+
+@media only screen and (min-width:1281px) and (max-width:2160px) {
+    footer .main section.bottom .partner-logo {
+        right: 240px!important
+    }
 }
