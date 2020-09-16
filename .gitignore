@@ -10,6 +10,7 @@ _site/
 .idea/
 *.iml
 *.DS_Store
+.jekyll-cache/
 
 # IDEs and editors
 /.idea

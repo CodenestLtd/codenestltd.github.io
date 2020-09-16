@@ -733,9 +733,7 @@ section#contact .text-danger {
 }
 
 footer {
-    padding: 25px 0;
     text-align: center;
-    color: black;
     border-top: 1px solid #eaeaea;
 }
 
@@ -828,8 +826,7 @@ footer section.bottom {
     border-color: #eaeaea;
     border-top: 1px solid #eaeaea;
     display: block;
-    padding: 50px 0 30px;
-    position: relative;
+    padding: 30px 0 30px;
     text-align: center;
 }
 
@@ -879,8 +876,7 @@ footer .main section.top nav a:hover {
 footer .main section.bottom {
     border-top: 1px solid #222;
     display: block;
-    padding: 50px 0 30px;
-    position: relative;
+    padding: 30px 0 30px;
     text-align: center
 }
 
@@ -890,34 +886,18 @@ footer .main section.bottom .social {
     text-align: center
 }
 
-footer .main section.bottom .social ul.social-links li {
-    border-color: #222;
+footer .main section.bottom .social ul.social-buttons li {
+    border-color: white;
     margin: 0 5px
 }
 
-footer .main section.bottom .social ul.social-links svg path {
+footer .main section.bottom .social ul.social-buttons svg path {
     fill: #fff
-}
-
-footer .main section.bottom .partner-logo {
-    flex: 0 1 auto;
-    margin: 0 auto 40px;
-    text-align: center
-}
-
-footer .main section.bottom .partner-logo a {
-    display: inline-block
-}
-
-footer .main section.bottom .partner-logo svg {
-    display: inline-block;
-    width: 155px;
-    height: 42px
 }
 
 footer .main section.bottom .footnote {
     align-items: center;
-    display: flex;
+    display: block;
     font-size: 0;
     justify-content: space-between
 }
@@ -944,7 +924,7 @@ footer .main section.bottom .scroll-up {
     top: 0;
     right: 0;
     bottom: 0;
-    position: absolute;
+    display: absolute;
     width: 190px;
     height: 100%;
     transition: all .3s cubic-bezier(.77, 0, .175, 1);
@@ -988,28 +968,28 @@ footer .main section.bottom {
     border-color: #eaeaea
 }
 
-footer .main section.bottom .social ul.social-links li:not(.focus):not(.no-focus) a {
+footer .main section.bottom .social ul.social-buttons li:not(.focus):not(.no-focus) a {
     border-color: #f3f3f3
 }
 
-footer .main section.bottom .social ul.social-links li:not(.focus):not(.no-focus) svg path {
+footer .main section.bottom .social ul.social-buttons li:not(.focus):not(.no-focus) svg path {
     fill: #000
 }
 
-footer .main section.bottom .social ul.social-links li.focus a {
+footer .main section.bottom .social ul.social-buttons li.focus a {
     background: #f3f3f3;
     border-color: #f3f3f3
 }
 
-footer .main section.bottom .social ul.social-links li.focus svg path {
+footer .main section.bottom .social ul.social-buttons li.focus svg path {
     fill: #000
 }
 
-footer .main section.bottom .social ul.social-links li.no-focus a {
+footer .main section.bottom .social ul.social-buttons li.no-focus a {
     border-color: #f3f3f3
 }
 
-footer .main section.bottom .social ul.social-links li.no-focus svg path {
+footer .main section.bottom .social ul.social-buttons li.no-focus svg path {
     fill: #eaeaea
 }
 
@@ -1032,8 +1012,8 @@ footer .main section.bottom .scroll-up:hover {
         top: 0;
         bottom: 0;
         left: 40px;
-        position: absolute;
-        text-align: left;
+        display: block;
+        text-align: center;
         z-index: 1;
     }
 }
@@ -1068,13 +1048,14 @@ ul.social-buttons li a {
     height: 40px;
     border-radius: 100%;
     font-size: 20px;
-    line-height: 40px;
+    line-height: 35px;
     outline: 0;
-    color: #fff;
-    background-color: #222;
+    color: black;
+    background-color: white;
     -webkit-transition: all .3s;
     -moz-transition: all .3s;
     transition: all .3s;
+    border: solid;
 }
 
 ul.social-buttons li a:hover,
@@ -1206,7 +1187,7 @@ body {
     }
     footer .main section .inner {
         align-items: center;
-        display: flex;
+        display: block;
         justify-content: space-between
     }
 
@@ -1233,49 +1214,38 @@ body {
     footer .main section.bottom {
         padding: 30px 0
     }
-    footer .main section.bottom .inner {
-        height: 50px
-    }
+
     footer .main section.bottom .social {
         justify-content: flex-end;
-        margin: auto 0;
+        margin: 0 auto 25px;
         top: 0;
         bottom: 0;
         left: 40px;
-        position: absolute;
-        text-align: left;
+        display: block;
+        text-align: center;
         z-index: 1
     }
-    footer .main section.bottom .social ul.social-links li:last-of-type {
+    footer .main section.bottom .social ul.social-buttons li:last-of-type {
         margin-right: 0
     }
-    footer .main section.bottom .social ul.social-links li:not(.focus):not(.no-focus) a {
-        border-color: #222
+    footer .main section.bottom .social ul.social-buttons li:not(.focus):not(.no-focus) a {
+        border-color: #f3f3f3
     }
-    footer .main section.bottom .social ul.social-links li:not(.focus):not(.no-focus) svg path {
+    footer .main section.bottom .social ul.social-buttons li:not(.focus):not(.no-focus) svg path {
         fill: #fff
     }
-    footer .main section.bottom .social ul.social-links li.focus a {
+    footer .main section.bottom .social ul.social-buttons li.focus a {
         background: #222;
         border-color: #222
     }
-    footer .main section.bottom .social ul.social-links li.focus svg path {
+    footer .main section.bottom .social ul.social-buttons li.focus svg path {
         fill: #fff
     }
-    footer .main section.bottom .social ul.social-links li.no-focus a {
+    footer .main section.bottom .social ul.social-buttons li.no-focus a {
         border-color: #222
     }
-    footer .main section.bottom .social ul.social-links li.no-focus svg path {
+    footer .main section.bottom .social ul.social-buttons li.no-focus svg path {
         fill: #222
-    }
-    footer .main section.bottom .partner-logo {
-        margin: 0;
-        top: 0;
-        right: 40px;
-        bottom: 0;
-        position: absolute;
-        text-align: right;
-        z-index: 1
     }
     footer .main section.bottom .footnote {
         display: block;
