@@ -281,7 +281,7 @@ header {
     text-align: center;
     color: #fff;
     background-attachment: scroll;
-    background-image: url('{{ site.baseurl }}/img/header-bg.png');
+    background-image: url('{{ site.baseurl }}/images/header-bg.png');
     background-position: center center;
     background-repeat: none;
     -webkit-background-size: cover;
@@ -516,7 +516,7 @@ footer .cta .button a {
 }
 
 footer .cta .button a:before {
-    background-image: url(../img/button-arrow--white.svg)
+    background-image: url(/images/button-arrow--white.svg)
 }
 
 footer .cta .button a {

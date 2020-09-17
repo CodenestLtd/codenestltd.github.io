@@ -1,18 +1,156 @@
 <!DOCTYPE html>
 <html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="viewport" content="width=device-width">
+  <meta name="description" content="{{ site.description }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
-  {% include head.html %}
 
+  <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+  <link rel="stylesheet" href="{{ "/style.css" | prepend: site.baseurl }}">
 
-    <body id="page-top" class="index">
+  <!-- Custom Fonts -->
+  <link rel="stylesheet" href="{{ "/css/font-awesome/css/font-awesome.min.css" | prepend: site.baseurl }}">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+  <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-    {% include navigation.html %}
-    {% include header.html %}
-    {% include about.html %}
-    {% include services.html %}
-    {% include clients.html %}
-    {% include footer.html %}
-    {% include js.html %}
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+  <body id="page-top" class="index">
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand page-scroll" href="/">
+          <img src="/images/companylogo.png" class="img-responsive img-centered" alt="Codenest" style="margin-top: -6px;">
+        </a>
+      </div>
 
-    </body>
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#about">About</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#services">Services</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="{{ site.page.contact.url }}">Contact</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+    <header>
+      <div class="container">
+        <div class="intro-text">
+          <div class="intro-heading">The Challenger Consultancy</div>
+          <div class="section-heading">Putting your needs first.</div>
+        </div>
+      </div>
+    </header>
+
+    {{content}}
+    <footer>
+      <section class="cta">
+        <div class="container">
+
+          <!-- Title -->
+          <h2 class="title">Want to know more?</h2>
+
+          <!-- Button -->
+          <div class="button">
+            <a href="{{ site.page.contact.url }}" title="Contact Codenest" target="_self">Get in touch						</a>
+          </div>
+
+        </div>
+      </section>
+      <div class="main">
+        <section class="top">
+          <div class="container">
+            <div class="inner">
+
+              <!-- Menu -->
+              <nav class="menu">
+                <ul>
+                  <li><a href="{{ site.page.privacy-policy.url }}" title="Read our privacy policy" target="_self">Privacy policy</a></li>
+                  <li><a href="{{ site.page.cookie-policy.url }}" title="Read our cookies policy" target="_self">Cookies policy</a></li>
+                  <li><a href="{{ site.page.terms-and-conditions.url }}" title="Read our terms &amp; conditions" target="_self">Terms &amp; conditions</a></li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </section>
+        <section class="bottom">
+          <div class="container">
+            <div class="inner">
+
+              <!-- Social icons -->
+              <div class="social">
+                <ul class="list-inline social-buttons">
+                  {% for network in site.social %}
+                  <li><a href="{{ network.url }}"><i class="fa fa-{{ network.title }}"></i></a>
+                  </li>
+                  {% endfor %}
+                </ul>
+              </div>
+
+              <!-- Footnote (copyright & company number) -->
+              <div class="footnote">
+                <span>Copyright &copy; {{ 'now' | date: "%Y" }} {{ site.company.name }}</span>
+                <span>Company no. {{ site.company.number }}</span>				        </div>
+
+            </div>
+          </div>
+
+          <!-- Scroll to top -->
+          <a href="#top" class="scroll-up hash-link" title="Scroll to top" target="_self" aria-hidden="true">
+            <svg width="26" height="15" xmlns="http://www.w3.org/2000/svg"><path d="M1.686 13L13 1.686 24.314 13" stroke="#000" stroke-width="2" fill="none" fill-rule="evenodd" stroke-linecap="square"></path></svg>		        </a>
+
+        </section>
+      </div>
+    </footer>
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="{{ "/js/jquery-1.11.0.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{{ "/js/bootstrap.min.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="{{ "/js/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/classie.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/cbpAnimatedHeader.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Contact Form JavaScript -->
+    <script src="{{ "/js/jqBootstrapValidation.js" | prepend: site.baseurl }}"></script>
+    <script src="{{ "/js/contact_me.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="{{ "/js/agency.js" | prepend: site.baseurl }}"></script>
+  </body>
 </html>
