@@ -1,7 +1,7 @@
 url: https://codenestltd.github.io
 
 # Site settings
-title: Codenest - Making Software Better
+title: Codenest - Putting your needs first
 email: accounts@codenest.uk
 description: "Codenest is a network of experienced software consultants, specialising in agile delivery."
 
@@ -9,12 +9,24 @@ company:
   name: Codenest Ltd
   number: 10909723
 
+pages:
+  - title: Contact Us
+    url: /contact-us/
+  - title: Terms and Conditions
+    url: /terms-and-conditions/
+  - title: Privacy Policy
+    url: /privacy-policy/
+  - title: Cookie Policy
+    url: /cookie-policy/
+
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
   - title: twitter
     url: https://twitter.com/Codenest_Ltd
   - title: github
     url: https://github.com/cod3nest
+  - title: linkedin
+    url: https://www.linkedin.com/company/codenest-ltd
 
 # Postal address (add as many lines as necessary)
 address:
