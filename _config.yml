@@ -9,14 +9,18 @@ company:
   name: Codenest Ltd
   number: 10909723
 
-pages:
-  - title: Contact Us
+page:
+  contact:
+    title: Contact Us
     url: /contact-us/
-  - title: Terms and Conditions
+  terms-and-conditions:
+    title: Terms and Conditions
     url: /terms-and-conditions/
-  - title: Privacy Policy
+  privacy-policy:
+    title: Privacy Policy
     url: /privacy-policy/
-  - title: Cookie Policy
+  cookie-policy:
+    title: Cookie Policy
     url: /cookie-policy/
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
