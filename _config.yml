@@ -6,14 +6,14 @@ email: accounts@codenest.uk
 description: "Codenest is a network of experienced software consultants, specialising in agile delivery."
 
 company:
-  domain: codenest.uk
   name: Codenest Ltd
   number: 10909723
-  registeredAddress:
-    - line: Clearway Accountant
-    - line: Colley Way
-    - line: Reigate
-    - line: RH2 9JH
+  domain: codenest.uk
+  fullDomain: https://www.codenest.uk
+  contact:
+    address: Clearway Accountant, Colley Way, Reigate, RH2 9JH
+    email:
+      info: accounts@codenest.uk
 
 page:
   contact:

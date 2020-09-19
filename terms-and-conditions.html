@@ -29,16 +29,13 @@ title: Terms and Conditions - Codenest
 
         <div class="main">
             <h3>Introduction</h3>
-            <p>This web page (together with the documents referred to in it) tells you the terms on which you make use of <a href="https://www.{{ site.company.domain }}">www.{{ site.company.domain }}</a> (our Website). Please read these Terms of Use carefully before you start to use our Website. By using our Website, you are accepting and agreeing to be bound by these Terms of Use. If you do not agree to these Terms of Use, please refrain from using our Website immediately.</p>
+            <p>This web page (together with the documents referred to in it) tells you the terms on which you make use of <a href="{{ site.company.fullDomain }}">www.{{ site.company.domain }}</a> (our Website). Please read these Terms of Use carefully before you start to use our Website. By using our Website, you are accepting and agreeing to be bound by these Terms of Use. If you do not agree to these Terms of Use, please refrain from using our Website immediately.</p>
             <h3>Who we are</h3>
             <p><strong>Company name: </strong>{{ site.company.name }}</p>
             <p><strong>Registered number:</strong> {{ site.company.number }}</p>
-            <p><strong>Our registered office:</strong>
-                {% for addressLine in site.company.registeredAddress %}
-                {{ addressLine.line }},
-                {% endfor %}
+            <p><strong>Our registered office:</strong> {{ site.company.contact.address }}
             </p>
-            <p><strong>Our contact details:</strong> <a href="mailto:info@{{ site.company.domain }}">info@{{ site.company.domain }}</a></p>
+            <p><strong>Our contact details:</strong> <a href="{{ site.company.contact.email.info }}">{{ site.company.contact.email.info }}</a></p>
             <h3>Reliance on information</h3>
             <p>Our Website is provided on an ‘as is’ basis and all information, commentary and other materials posted on our Website are intended for general information purposes only. We therefore disclaim all liability and responsibility arising as a result of any reliance placed on such information, commentary or other materials contained on our Website by any visitor to our Website, or by anyone who may be informed of any of its content.</p>
             <h3>Accessing our Website</h3>
@@ -71,10 +68,10 @@ title: Terms and Conditions - Codenest
             <p>It is impossible to provide an exhaustive list of what constitutes acceptable and unacceptable use of our Website. In general, we will not tolerate any use of our Website which damages or is likely to damage our reputation, the availability or integrity of our Website or which causes or threatens to cause us to incur any legal, tax or regulatory liability. In particular, you must not misuse our Website by knowingly introducing viruses or other material which is malicious or technologically harmful. You must not attempt to gain unauthorised access to our Website, the server on which our Website is stored, or any server, computer, or database connected to our Website. You must not attack our Website via a denial-of-service attack or a distributed denial-of-service attack. We will determine, in our absolute discretion, whether your use of our Website is unacceptable and, in this event, we may take such action as we deem appropriate.</p>
             <p>We will not be liable for any loss or damage caused by a distributed denial-of-service attack, viruses, malicious code or other technologically harmful material that may infect your computer equipment, computer programs, data or other proprietary material due to your use of our Website or to your downloading of any material posted on it, or on any website linked to it.</p>
             <h3>Uploading material to our Website</h3>
-            <p>Without prejudice to our rights and obligations in relation to your personal information as set out in detail in our <a href="https://{{ site.company.domain }}/privacy-policy/">Privacy Policy</a>, any material you upload to our Website will be considered non-confidential and non-proprietary and we have the right to use, copy, distribute and disclose to third parties any such material for any purpose. We also have the right to disclose your identity to any third party who is claiming that any material posted or uploaded by you to our Website constitutes a violation of their intellectual property rights, or their right to privacy. We have the right to remove any material or posting you make on our Website at any time.</p>
+            <p>Without prejudice to our rights and obligations in relation to your personal information as set out in detail in our <a href="{{ site.company.fullDomain }}/privacy-policy/">Privacy Policy</a>, any material you upload to our Website will be considered non-confidential and non-proprietary and we have the right to use, copy, distribute and disclose to third parties any such material for any purpose. We also have the right to disclose your identity to any third party who is claiming that any material posted or uploaded by you to our Website constitutes a violation of their intellectual property rights, or their right to privacy. We have the right to remove any material or posting you make on our Website at any time.</p>
             <h3>Privacy and cookies</h3>
-            <p>Any personal details we collect from you will only be used in accordance with our <a href="https://{{ site.company.domain }}/privacy-policy/">Privacy Policy</a><em>.</em> By using our Website, you consent to us processing your information in this way and you warrant that all data provided by you is accurate.</p>
-            <p>We use cookies on our Website.&nbsp; For further information about how we use cookies please see our <a href="https://{{ site.company.domain }}/cookie-policy/">Cookie Policy</a>.</p>
+            <p>Any personal details we collect from you will only be used in accordance with our <a href="{{ site.company.fullDomain }}/privacy-policy/">Privacy Policy</a><em>.</em> By using our Website, you consent to us processing your information in this way and you warrant that all data provided by you is accurate.</p>
+            <p>We use cookies on our Website.&nbsp; For further information about how we use cookies please see our <a href="{{ site.company.fullDomain }}/cookie-policy/">Cookie Policy</a>.</p>
             <h3>Our Website changes regularly</h3>
             <p>We aim to update our Website regularly and may change the content at any time. If the need arises we may suspend access to our Website or close it indefinitely. Any of the material on our Website may be out of date at any given time, and we are under no obligation to update such material.</p>
             <h3>Severability</h3>
@@ -84,8 +81,8 @@ title: Terms and Conditions - Codenest
             <h3>Jurisdiction and applicable law</h3>
             <p>These Terms of Use shall be governed by and construed in accordance with the law of England and Wales and subject to the exclusive jurisdiction of the English courts.</p>
             <h3>Your concerns</h3>
-            <p>If you have any queries regarding our Website or the information contained on it, please contact us at info@{{ site.company.domain }}.</p>
-            <p>Version Date:&nbsp; March 2020</p>
+            <p>If you have any queries regarding our Website or the information contained on it, please contact us at {{ site.company.contact.email.info }}.</p>
+            <p>Version Date:&nbsp; September 2020</p>
         </div>
 
     </div>
