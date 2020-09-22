@@ -28,6 +28,10 @@ main {
     z-index: 1
 }
 
+ul {
+    list-style: none; /* Remove default bullets */
+}
+
 .text-muted {
     color: #{{ site.data.template.color.muted }};
 }
@@ -180,8 +184,8 @@ fieldset[disabled] .btn-xl.active {
 }
 
 .navbar-default {
-    border-color: transparent;
-    background-color: #222;
+    background-color: white;
+    border-bottom: 1px solid #eaeaea;
 }
 
 .navbar-default .navbar-brand {
@@ -219,7 +223,7 @@ fieldset[disabled] .btn-xl.active {
     font-family: {{ site.data.template.font.primary }};
     font-weight: 400;
     letter-spacing: 1px;
-    color: #fff;
+    color: black;
     -webkit-transition: all ease .35s;
     -moz-transition: all ease .35s;
     transition: all ease .35s;
@@ -247,10 +251,11 @@ fieldset[disabled] .btn-xl.active {
     .navbar-default {
         padding: 25px 0;
         border: 0;
-        background-color: transparent;
+        background-color: white;
         -webkit-transition: padding .3s;
         -moz-transition: padding .3s;
         transition: padding .3s;
+        border-bottom: 1px solid #eaeaea;
     }
 
     .navbar-default .navbar-brand {
@@ -266,7 +271,7 @@ fieldset[disabled] .btn-xl.active {
 
     .navbar-default.navbar-shrink {
         padding: 10px 0;
-        background-color: #222;
+        background-color: white;
     }
 
     .navbar-default.navbar-shrink .navbar-brand {
@@ -472,7 +477,7 @@ header.hero nav.filters .dk-select .dk-selected .pre-label:not(:first-of-type) {
 }
 
 header.hero nav.filters .dk-select .dk-selected:before {
-    background: transparent url(../img/insights-hero-filter-arrow.svg) no-repeat 50%/15px 9px;
+    background: transparent url(../images/insights-hero-filter-arrow.svg) no-repeat 50%/15px 9px;
     content: "";
     display: block;
     margin: auto 0;
@@ -530,7 +535,7 @@ header.hero nav.filters .dk-select.dk-select-open-up ul.dk-select-options {
 }
 
 header.hero.pattern--01:after {
-    background: transparent url(../img/careers-hero-pattern.svg) no-repeat 50%/283px 273px;
+    background: transparent url(../images/careers-hero-pattern.svg) no-repeat 50%/283px 273px;
     content: "";
     top: 205px;
     left: calc(50% + 20px);
@@ -747,7 +752,7 @@ section.default-wysiwyg .main a>.button--orange {
 section.default-wysiwyg .main .button--orange a:before,
 section.default-wysiwyg .main a.button--orange:before,
 section.default-wysiwyg .main a>.button--orange:before {
-    background-image: url(../img/button-arrow--white.svg)
+    background-image: url(../images/button-arrow--white.svg)
 }
 
 section.default-wysiwyg .main .button--orange a,
@@ -810,7 +815,7 @@ section.default-wysiwyg .main a>.button--black {
 section.default-wysiwyg .main .button--black a:before,
 section.default-wysiwyg .main a.button--black:before,
 section.default-wysiwyg .main a>.button--black:before {
-    background-image: url(../img/button-arrow--white.svg)
+    background-image: url(../images/button-arrow--white.svg)
 }
 
 section.default-wysiwyg .main .button--black a,
@@ -972,14 +977,6 @@ section.default-wysiwyg.view-detect.viewed {
         font-size: 14px;
         font-size: .875rem
     }
-    header.article-hero .textarea .sub-title {
-        font-size: 12px;
-        font-size: .75rem
-    }
-    header.article-hero .textarea .meta span {
-        font-size: 14px;
-        font-size: .875rem
-    }
     header.contact-hero .sub-title,
     header.hero-with-img .sub-title,
     header.hero .sub-title {
@@ -1003,7 +1000,7 @@ section.default-wysiwyg.view-detect.viewed {
         padding-left: 30px;
         padding-right: 30px
     }
-    header.home-hero .main:before {
+    header.primary .main:before {
         background-image: linear-gradient(180deg, rgba(0, 0, 0, .7), transparent);
         content: "";
         pointer-events: none;
@@ -1019,28 +1016,6 @@ section.default-wysiwyg.view-detect.viewed {
         font-size: 14px;
         font-size: .875rem
     }
-    header.insights-hero aside.textarea .sub-title {
-        font-size: 12px;
-        font-size: .75rem
-    }
-    header.insights-hero aside.textarea .meta span {
-        font-size: 14px;
-        font-size: .875rem
-    }
-    header.insights-hero nav.filters .options form>ul>li .dk-select .dk-selected {
-        padding-left: 30px
-    }
-    header.insights-hero nav.filters .options form>ul>li .dk-select .dk-selected .pre-label {
-        margin-right: 30px
-    }
-    header.insights-hero nav.filters .options form>ul>li .dk-select .dk-selected:before {
-        right: 24px
-    }
-    header.insights-hero nav.filters .options form>ul>li .dk-select ul.dk-select-options li.dk-option {
-        padding-left: 30px;
-        padding-right: 30px
-    }
-    header.primary .front-pane .cta a,
     header.primary nav.menu-pane aside.additional .cta a {
         font-size: 14px;
         font-size: .875rem
@@ -1057,10 +1032,7 @@ section.default-wysiwyg.view-detect.viewed {
         margin: 0 30px 0 0;
         padding-right: 55px
     }
-    header.work-hero .year,
-    header.work-hero ul.service-tags li,
     section.article-foot aside.tags a,
-    section.article-group .buttons a,
     section.default-wysiwyg .main .button--black a,
     section.default-wysiwyg .main .button--orange a,
     section.default-wysiwyg .main a.button--black,
@@ -1266,31 +1238,9 @@ section.default-wysiwyg.view-detect.viewed {
         margin-top: 60px;
         padding: 0
     }
-    section.vacancy-listing .cta-pane .button a,
-    section.vacancy-listing .foot-button a {
-        font-size: 14px;
-        font-size: .875rem
-    }
-    section.work-listing .listing {
-        align-items: stretch;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        margin-bottom: 0;
-        margin-left: -15px;
-        margin-right: -15px;
-        width: calc(100% + 30px)
-    }
 }
 
 @media (min-width:960px) and (max-width:1280px) {
-    header.insights-hero aside.textarea {
-        align-items: center;
-        padding-top: 200px
-    }
-    header.insights-hero aside.textarea .meta {
-        margin-top: 50px
-    }
     section.img-aside-text .section aside {
         min-height: 400px
     }
@@ -1558,6 +1508,7 @@ footer .main section.top nav {
 }
 
 footer .main section.top nav ul {
+    padding: 0px;
     font-size: 0
 }
 
@@ -1771,7 +1722,7 @@ footer .main section.bottom .scroll-up:hover {
     }
     figure.inline-promo-cta .pane {
         align-content: stretch;
-        background: #000 url(../img/inline-promo-cta-bg.svg) no-repeat top -730px right -100px/910px 1175px;
+        background: #000 url(../images/inline-promo-cta-bg.svg) no-repeat top -730px right -100px/910px 1175px;
         display: flex;
         flex-wrap: nowrap;
         justify-content: space-between;
@@ -2048,28 +1999,6 @@ footer .main section.bottom .scroll-up:hover {
         text-align: center;
         width: 100%
     }
-    header.article-hero {
-        margin-bottom: 100px
-    }
-    header.article-hero .textarea {
-        padding: 290px 0 120px
-    }
-    header.article-hero .textarea .title {
-        letter-spacing: -.03em;
-        line-height: 1.15em;
-        padding-right: 0
-    }
-    header.article-hero .textarea .meta {
-        margin-top: 30px
-    }
-    header.article-hero .textarea .meta span {
-        display: inline-block
-    }
-    header.article-hero .textarea .meta span.author:before {
-        content: "â€¢";
-        display: inline-block;
-        margin: 0 5px
-    }
     header.contact-hero {
         padding-top: 290px
     }
@@ -2149,148 +2078,28 @@ footer .main section.bottom .scroll-up:hover {
         padding-left: 35px;
         padding-right: 65px
     }
-    header.insights-hero .main .container {
-        align-content: stretch;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between
-    }
-    header.insights-hero aside {
-        display: inline-block;
-        flex: 0 0 50%;
-        max-width: 50%;
-        width: 50%
-    }
-    header.insights-hero aside.media {
-        height: auto;
-        margin-bottom: 0;
-        order: 1;
-        overflow: hidden;
-        padding-bottom: 0
-    }
-    header.insights-hero aside.media:before {
-        display: none
-    }
-    header.insights-hero aside.media a.image {
-        pointer-events: all
-    }
-    header.insights-hero aside.media a.image:hover .src {
-        transform: scale(1.075)
-    }
-    header.insights-hero aside.textarea .meta a.arrow {
-        width: 70px;
-        height: 70px
-    }
-    header.insights-hero aside.textarea .meta a.arrow:after,
-    header.insights-hero aside.textarea .meta a.arrow:before {
-        background-size: 25px 20px;
-        width: 25px;
-        height: 20px
-    }
-    header.insights-hero aside.textarea .meta a.arrow:hover:before {
-        opacity: 0;
-        transform: translateX(70px)
-    }
-    header.insights-hero aside.textarea .meta a.arrow:hover:after {
-        opacity: 1;
-        transform: translateX(0)
-    }
-    header.insights-hero aside.textarea .meta a.arrow {
-        background-color: #000;
-        border-color: #222
-    }
-    header.insights-hero aside.textarea .meta a.arrow:after,
-    header.insights-hero aside.textarea .meta a.arrow:before {
-        background-image: url(../img/button-arrow--white.svg)
-    }
-    header.insights-hero aside.textarea .meta a.arrow:hover {
-        background-color: #222
-    }
-    header.insights-hero aside.textarea {
-        order: 0
-    }
-    header.insights-hero aside.textarea .title {
-        letter-spacing: -.03em;
-        line-height: 1.15em;
-        padding-right: 0
-    }
-    header.insights-hero aside.textarea .meta {
-        min-height: 70px
-    }
-    header.insights-hero nav.filters {
-        padding-top: 30px
-    }
-    header.insights-hero nav.filters .options {
-        display: inline-block;
-        top: auto;
-        right: auto;
-        bottom: auto;
-        left: auto;
-        position: relative
-    }
-    header.insights-hero nav.filters .mobile-button {
-        display: none
-    }
-    header.insights-hero.hover aside.textarea .meta a.arrow {
-        background-color: #222
-    }
-    header.insights-hero.hover aside.textarea .meta a.arrow:before {
-        opacity: 0;
-        transform: translateX(70px)
-    }
-    header.insights-hero.hover aside.textarea .meta a.arrow:after {
-        opacity: 1;
-        transform: translateX(0)
-    }
-    header.insights-hero.hover aside.media .src {
-        transform: scale(1.075)
-    }
-    header.primary .front-pane .cta a {
-        min-height: 70px;
-        min-width: 260px;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 26px;
-        transition-delay: 0s
-    }
-    header.primary .front-pane .cta a:hover {
-        padding-left: 20px;
-        padding-right: 60px
-    }
-    header.primary .front-pane .cta a:hover:before {
-        right: 25px;
-        opacity: 1;
-        transition-delay: .1s
-    }
-    header.primary .front-pane .cta {
-        display: inline-block
-    }
-    header.primary .front-pane .cta a {
-        font-size: 15px;
-        font-size: .9375rem
-    }
-    header.primary.on-white-page .front-pane {
+    header.primary.on-white-page .navbar {
         background-color: #fff;
         border-bottom: 1px solid #eaeaea
     }
-    header.primary.on-white-page .front-pane .logo .src {
-        background-image: url(../img/logo-black-opt.svg)
+    header.primary.on-white-page .navbar .logo .src {
+        background-image: url(../images/logo-black-opt.svg)
     }
-    header.primary.on-white-page .front-pane .logo svg g,
-    header.primary.on-white-page .front-pane .logo svg mask,
-    header.primary.on-white-page .front-pane .logo svg path {
+    header.primary.on-white-page .navbar .logo svg g,
+    header.primary.on-white-page .navbar .logo svg mask,
+    header.primary.on-white-page .navbar .logo svg path {
         fill: #000
     }
-    header.primary.on-white-page .front-pane .menu-inline a:not(:hover) {
+    header.primary.on-white-page .navbar .menu-inline a:not(:hover) {
         color: #000
     }
-    header.primary.on-white-page .front-pane .menu-button {
+    header.primary.on-white-page .navbar .menu-button {
         border-color: #eaeaea
     }
-    header.primary.on-white-page .front-pane .menu-button .trigger i {
+    header.primary.on-white-page .navbar .menu-button .trigger i {
         background-color: #000
     }
-    header.primary.on-white-page .front-pane .cta:before {
+    header.primary.on-white-page .navbar .cta:before {
         display: none
     }
     header.primary nav.menu-pane aside.additional .cta a {
@@ -2310,31 +2119,31 @@ footer .main section.bottom .scroll-up:hover {
         opacity: 1;
         transition-delay: .1s
     }
-    body:not(.menu--open).scrolling-down header.primary:not(.on-white-page) .front-pane,
-    body:not(.menu--open).scrolling-up header.primary:not(.on-white-page) .front-pane {
+    body:not(.menu--open).scrolling-down header.primary:not(.on-white-page) .navbar,
+    body:not(.menu--open).scrolling-up header.primary:not(.on-white-page) .navbar {
         padding-top: 30px!important
     }
-    body:not(.menu--open).scrolling-down header.primary.on-white-page .front-pane,
-    body:not(.menu--open).scrolling-up header.primary.on-white-page .front-pane {
+    body:not(.menu--open).scrolling-down header.primary.on-white-page .navbar,
+    body:not(.menu--open).scrolling-up header.primary.on-white-page .navbar {
         background-color: #fff!important;
         padding-top: 30px!important
     }
-    body:not(.menu--open).scrolling-down header.primary.on-white-page .front-pane .menu-button .trigger i,
-    body:not(.menu--open).scrolling-up header.primary.on-white-page .front-pane .menu-button .trigger i {
+    body:not(.menu--open).scrolling-down header.primary.on-white-page .navbar .menu-button .trigger i,
+    body:not(.menu--open).scrolling-up header.primary.on-white-page .navbar .menu-button .trigger i {
         background: #000;
         transition-delay: .6s
     }
-    body:not(.menu--open).scrolling-down header.primary.on-white-page .front-pane .logo .src,
-    body:not(.menu--open).scrolling-up header.primary.on-white-page .front-pane .logo .src {
-        background-image: url(../img/logo-black-opt.svg);
+    body:not(.menu--open).scrolling-down header.primary.on-white-page .navbar .logo .src,
+    body:not(.menu--open).scrolling-up header.primary.on-white-page .navbar .logo .src {
+        background-image: url(../images/logo-black-opt.svg);
         transition-delay: .6s
     }
-    body:not(.menu--open).scrolling-down header.primary.on-white-page .front-pane .logo svg g,
-    body:not(.menu--open).scrolling-down header.primary.on-white-page .front-pane .logo svg mask,
-    body:not(.menu--open).scrolling-down header.primary.on-white-page .front-pane .logo svg path,
-    body:not(.menu--open).scrolling-up header.primary.on-white-page .front-pane .logo svg g,
-    body:not(.menu--open).scrolling-up header.primary.on-white-page .front-pane .logo svg mask,
-    body:not(.menu--open).scrolling-up header.primary.on-white-page .front-pane .logo svg path {
+    body:not(.menu--open).scrolling-down header.primary.on-white-page .navbar .logo svg g,
+    body:not(.menu--open).scrolling-down header.primary.on-white-page .navbar .logo svg mask,
+    body:not(.menu--open).scrolling-down header.primary.on-white-page .navbar .logo svg path,
+    body:not(.menu--open).scrolling-up header.primary.on-white-page .navbar .logo svg g,
+    body:not(.menu--open).scrolling-up header.primary.on-white-page .navbar .logo svg mask,
+    body:not(.menu--open).scrolling-up header.primary.on-white-page .navbar .logo svg path {
         fill: #000;
         transition-delay: .6s
     }
@@ -2364,49 +2173,6 @@ footer .main section.bottom .scroll-up:hover {
     }
     header.service-hero ul.stats .label {
         margin-top: 20px
-    }
-    header.work-hero .textarea {
-        padding-bottom: 80px;
-        padding-top: 290px
-    }
-    header.work-hero .title {
-        letter-spacing: -.03em;
-        line-height: 1.15em;
-        padding-right: 0
-    }
-    header.work-hero .meta {
-        margin-top: 20px
-    }
-    header.work-hero .year {
-        display: inline-block;
-        padding-top: 10px
-    }
-    header.work-hero ul.service-tags {
-        display: inline-block;
-        margin: 0 0 0 15px;
-        padding: 10px 0 0 16px
-    }
-    header.work-hero ul.service-tags:before {
-        bottom: 0;
-        margin: auto 0;
-        width: 1px;
-        height: 12px
-    }
-    header.work-hero ul.service-tags li:not(:last-of-type) {
-        margin-right: 15px
-    }
-    header.work-hero ul.service-tags a:hover {
-        color: #ff6100
-    }
-    header.work-hero figure.image {
-        padding-bottom: 51.389%
-    }
-    header.work-hero figure.image img {
-        -webkit-backface-visibility: hidden;
-        backface-visibility: hidden;
-        height: auto;
-        perspective: 1000;
-        top: -10%
     }
     section.article-foot {
         margin-bottom: 180px;
@@ -2467,50 +2233,6 @@ footer .main section.bottom .scroll-up:hover {
     }
     section.article-foot aside.tags a:hover {
         color: #ff6100
-    }
-    section.article-group {
-        padding: 140px 0
-    }
-    section.article-group.pad-bottom-inc--01 {
-        padding-bottom: 180px
-    }
-    section.article-group.margin-top-inc--01 {
-        margin-top: 140px
-    }
-    section.article-group .heading {
-        margin-bottom: 60px
-    }
-    section.article-group .buttons a {
-        min-height: 70px;
-        min-width: 260px;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 26px;
-        transition-delay: 0s
-    }
-    section.article-group .buttons a:hover {
-        padding-left: 20px;
-        padding-right: 60px
-    }
-    section.article-group .buttons a:hover:before {
-        right: 25px;
-        opacity: 1;
-        transition-delay: .1s
-    }
-    section.article-group .buttons {
-        align-content: flex-start;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-top: 80px
-    }
-    section.article-group .buttons .button {
-        flex: 0 0 auto;
-        margin-left: 10px;
-        margin-right: 10px
-    }
-    section.article-group .buttons .button:not(:last-of-type) {
-        margin-bottom: 0
     }
     section.default-wysiwyg {
         padding: 140px 0 180px
@@ -3000,7 +2722,7 @@ footer .main section.bottom .scroll-up:hover {
     }
     section.service-accordion aside.accordions li.item .permalink a:after,
     section.service-accordion aside.accordions li.item .permalink a:before {
-        background-image: url(../img/button-arrow--white.svg)
+        background-image: url(../images/button-arrow--white.svg)
     }
     section.service-accordion aside.accordions li.item .permalink a:hover {
         background-color: #222
@@ -3053,7 +2775,7 @@ footer .main section.bottom .scroll-up:hover {
     }
     section.service-listing .listing li i.arrow:after,
     section.service-listing .listing li i.arrow:before {
-        background-image: url(../img/button-arrow--white.svg)
+        background-image: url(../images/button-arrow--white.svg)
     }
     section.service-listing .listing li i.arrow:hover {
         background-color: #222
@@ -3422,151 +3144,10 @@ footer .main section.bottom .scroll-up:hover {
     }
     section.text-aside-img-montage aside.content .alt-cta a:after,
     section.text-aside-img-montage aside.content .alt-cta a:before {
-        background-image: url(../img/button-arrow--black.svg)
+        background-image: url(../images/button-arrow--black.svg)
     }
     section.text-aside-img-montage aside.content .alt-cta a:hover {
         background-color: #f3f3f3
-    }
-    section.vacancy-listing .listing a.arrow {
-        width: 70px;
-        height: 70px
-    }
-    section.vacancy-listing .listing a.arrow:after,
-    section.vacancy-listing .listing a.arrow:before {
-        background-size: 25px 20px;
-        width: 25px;
-        height: 20px
-    }
-    section.vacancy-listing .listing a.arrow:hover:before {
-        opacity: 0;
-        transform: translateX(70px)
-    }
-    section.vacancy-listing .listing a.arrow:hover:after {
-        opacity: 1;
-        transform: translateX(0)
-    }
-    section.vacancy-listing .listing a.arrow {
-        background-color: #000;
-        border-color: #222
-    }
-    section.vacancy-listing .listing a.arrow:after,
-    section.vacancy-listing .listing a.arrow:before {
-        background-image: url(../img/button-arrow--white.svg)
-    }
-    section.vacancy-listing .listing a.arrow:hover {
-        background-color: #222
-    }
-    section.vacancy-listing .foot-button a {
-        min-height: 70px;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 26px;
-        transition-delay: 0s
-    }
-    section.vacancy-listing .foot-button a:hover {
-        padding-left: 20px;
-        padding-right: 60px
-    }
-    section.vacancy-listing .foot-button a:hover:before {
-        right: 25px;
-        opacity: 1;
-        transition-delay: .1s
-    }
-    section.vacancy-listing .cta-pane .button a {
-        min-height: 70px;
-        min-width: 260px;
-        padding-left: 40px;
-        padding-right: 40px;
-        padding-top: 26px;
-        transition-delay: 0s
-    }
-    section.vacancy-listing .cta-pane .button a:hover {
-        padding-left: 20px;
-        padding-right: 60px
-    }
-    section.vacancy-listing .cta-pane .button a:hover:before {
-        right: 25px;
-        opacity: 1;
-        transition-delay: .1s
-    }
-    section.vacancy-listing .cta-pane .button a:hover {
-        background-color: #f3f3f3
-    }
-    section.vacancy-listing {
-        padding-bottom: 140px;
-        padding-top: 180px
-    }
-    section.vacancy-listing .heading {
-        margin-bottom: 80px
-    }
-    section.vacancy-listing .listing {
-        margin-bottom: 80px;
-        padding-left: 40px;
-        padding-right: 40px
-    }
-    section.vacancy-listing .listing ul.whr-items {
-        align-content: flex-start;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between
-    }
-    section.vacancy-listing .listing li.whr-item {
-        border: 0 none!important;
-        flex: 0 0 calc(50% - 30px);
-        margin-bottom: 40px;
-        max-width: calc(50% - 30px);
-        min-height: 70px;
-        padding: 7px 130px 0 0;
-        width: calc(50% - 30px)
-    }
-    section.vacancy-listing .listing .whr-title a:hover {
-        color: #ff6100
-    }
-    section.vacancy-listing .listing a.arrow {
-        top: 0;
-        right: 0
-    }
-    section.vacancy-listing .foot-button a {
-        min-width: 260px
-    }
-    section.vacancy-listing .cta-pane {
-        align-content: stretch;
-        background: #222 url(../img/vacancy-listing-cta-bg.svg) no-repeat top -225px right -100px/973px 550px;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        margin-top: 140px;
-        padding: 50px
-    }
-    section.vacancy-listing .cta-pane .textarea {
-        display: inline-block;
-        flex: 1 1 auto;
-        justify-content: flex-start;
-        padding-right: 80px
-    }
-    section.vacancy-listing .cta-pane .description,
-    section.vacancy-listing .cta-pane .title {
-        max-width: 550px
-    }
-    section.vacancy-listing .cta-pane .button {
-        align-content: center;
-        display: inline-flex;
-        flex: 0 1 auto;
-        justify-content: flex-end;
-        margin-top: 0
-    }
-    section.vacancy-listing .cta-pane .button a {
-        margin: auto
-    }
-    section.work-listing {
-        padding-bottom: 170px
-    }
-    section.work-listing nav.listing-pagination {
-        margin-bottom: 0;
-        margin-top: 110px
-    }
-    section.work-listing nav.listing-pagination a.page-numbers:hover {
-        background-color: #fff
     }
 }
 
@@ -3746,9 +3327,6 @@ body {
         padding-left: 40px;
         padding-right: 0
     }
-    header.insights-hero aside.textarea {
-        padding-left: 40px
-    }
     section.media-float-textarea aside.content {
         padding: 55px 80px 55px 60px
     }
@@ -3868,28 +3446,11 @@ body {
         flex: 0 0 calc(100% - 300px);
         max-width: 900px
     }
-    footer.primary .container,
-    header.article-hero .container {
+    footer.primary .container {
         padding-left: 40px;
         padding-right: 40px
     }
-    header.article-hero figure.media .video .video-overlay .button {
-        width: 120px;
-        height: 120px
-    }
-    header.article-hero figure.media .video .video-overlay .button i.play svg {
-        max-width: 25px
-    }
-    header.article-hero figure.media .video .video-overlay .button i.pause svg {
-        max-width: 21px
-    }
-    header.article-hero figure.media .video .video-overlay .button:hover {
-        background: #000;
-        transform: translate(-50%, -50%) scale(1.1)
-    }
-    header.article-hero figure.media .video .video-overlay .button:hover i svg path {
-        fill: #fff
-    }
+
     header.contact-hero .container,
     header.hero-with-img .textarea {
         padding-left: 40px;
@@ -4046,66 +3607,34 @@ body {
     header.home-hero.button-focus figure.background .image.split:before {
         opacity: 0
     }
-    header.insights-hero aside.media a.image {
-        top: calc(50% + 55px);
-        right: auto;
-        bottom: auto;
-        left: calc(50% - 20px);
-        width: 550px;
-        height: 550px;
-        transform: translate(-50%, -50%)
-    }
-    header.insights-hero aside.textarea {
-        min-height: 780px
-    }
-    header.insights-hero aside.textarea .textarea-inner {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        justify-content: space-between
-    }
-    header.insights-hero aside.textarea .meta .primary {
-        display: block
-    }
-    header.insights-hero aside.textarea .meta span {
-        display: inline-block
-    }
-    header.insights-hero aside.textarea .meta span.author:before {
-        content: "â€¢";
-        display: inline-block;
-        margin: 0 5px
-    }
-    header.insights-hero nav.filters .container {
-        padding-left: 40px;
-        padding-right: 40px
-    }
-    header.primary .front-pane {
+    header.primary .navbar {
         border-bottom: 0 none;
-        padding: 30px 0
+        padding: 30px 0;
+        border-bottom: 1px solid #eaeaea;
     }
-    header.primary .front-pane.-is-bg-transparent {
+    header.primary .navbar.-is-bg-transparent {
         background-color: transparent;
         border-bottom: 1px solid hsla(0, 0%, 100%, .2)
     }
-    header.primary .front-pane.-is-bg-transparent .cta {
+    header.primary .navbar.-is-bg-transparent .cta {
         padding-left: 0
     }
-    header.primary .front-pane.-is-bg-transparent .cta:before {
+    header.primary .navbar.-is-bg-transparent .cta:before {
         display: none
     }
-    header.primary .front-pane .container {
+    header.primary .navbar .container {
         padding-left: 40px;
         padding-right: 40px
     }
-    header.primary .front-pane .logo {
+    header.primary .navbar .logo {
         order: unset
     }
-    header.primary .front-pane .logo .src {
+    header.primary .navbar .logo .src {
         background-size: 226px 15px;
         width: 226px;
         height: 15px
     }
-    header.primary .front-pane .logo svg {
+    header.primary .navbar .logo svg {
         width: 226px;
         height: 15px
     }
@@ -4236,71 +3765,9 @@ body {
         opacity: 1;
         transform: translateY(-.1325em)
     }
-    header.work-hero .container {
-        padding-left: 40px;
-        padding-right: 40px
-    }
-    header.work-hero.view-detect .container {
-        opacity: 0
-    }
-    header.work-hero.view-detect .title span.line1 span.inner {
-        transition-delay: 0s
-    }
-    header.work-hero.view-detect .title span.line2 span.inner {
-        transition-delay: .1s
-    }
-    header.work-hero.view-detect .title span.line3 span.inner {
-        transition-delay: .2s
-    }
-    header.work-hero.view-detect .title span.line4 span.inner {
-        transition-delay: .3s
-    }
-    header.work-hero.view-detect .title span.line5 span.inner {
-        transition-delay: .4s
-    }
-    header.work-hero.view-detect .title span.inner {
-        opacity: 0;
-        transform: translateY(calc(100% + 10px));
-        transition: transform 1.2s cubic-bezier(.77, 0, .175, 1) .2s, opacity 1.2s cubic-bezier(.77, 0, .175, 1) .2s
-    }
-    header.work-hero.view-detect.viewed .container {
-        opacity: 1
-    }
-    header.work-hero.view-detect.viewed .title span.inner {
-        opacity: 1;
-        transform: translateY(-.1325em)
-    }
-    section.article-foot .container,
-    section.article-group .container {
-        padding-left: 40px;
-        padding-right: 40px
-    }
-    section.article-group .listing {
-        align-items: stretch;
-        display: flex;
-        flex-wrap: nowrap;
-        justify-content: flex-start;
-        margin-left: -15px;
-        margin-right: -15px;
-        width: calc(100% + 30px)
-    }
-    section.article-group .listing:after {
-        content: ""
-    }
-    section.article-group .listing article {
-        display: inline-block;
-        margin: 0 15px;
-        max-width: none;
-        min-width: none;
-        width: calc(33.3333% - 15px)
-    }
-    section.article-group.align--centre .listing {
-        justify-content: center
-    }
     section.default-wysiwyg .container,
     section.error-poster .container,
     section.event-listing .container,
-    section.featured-articles .container,
     section.img-aside-accordion .container {
         padding-left: 40px;
         padding-right: 40px
@@ -4361,7 +3828,7 @@ body {
     }
     section.link-group li i.arrow:after,
     section.link-group li i.arrow:before {
-        background-image: url(../img/button-arrow--white.svg);
+        background-image: url(../images/button-arrow--white.svg);
         content: "";
         display: block
     }
@@ -4603,11 +4070,6 @@ body {
         width: 70px;
         height: 70px
     }
-    section.vacancy-listing .heading,
-    section.work-listing .container {
-        padding-left: 40px;
-        padding-right: 40px
-    }
 }
 
 @media screen and (min-width:1280px) {
@@ -4651,7 +4113,6 @@ body {
         font-size: 38px;
         font-size: 2.375rem
     }
-    header.article-hero .textarea .title,
     header.contact-hero .title {
         font-size: 52px;
         font-size: 3.25rem
@@ -4668,10 +4129,6 @@ body {
     header.home-hero .content .title h1 {
         font-size: 70px;
         font-size: 4.375rem
-    }
-    header.insights-hero aside.textarea .title {
-        font-size: 52px;
-        font-size: 3.25rem
     }
     header.primary nav.menu-pane nav.menu li.item-lvl--2 {
         font-size: 22px;
@@ -4950,30 +4407,6 @@ body {
         font-size: 16px;
         font-size: 1rem
     }
-    section.vacancy-listing .heading .title {
-        font-size: 52px;
-        font-size: 3.25rem
-    }
-    section.vacancy-listing .heading .description {
-        font-size: 19px;
-        font-size: 1.1875rem;
-        font-size: 16px;
-        font-size: 1rem
-    }
-    section.vacancy-listing .listing .whr-title {
-        font-size: 22px;
-        font-size: 1.375rem
-    }
-    section.vacancy-listing .cta-pane .title {
-        font-size: 38px;
-        font-size: 2.375rem
-    }
-    section.vacancy-listing .cta-pane .description {
-        font-size: 19px;
-        font-size: 1.1875rem;
-        font-size: 16px;
-        font-size: 1rem
-    }
 }
 
 @media only screen and (min-width:1280px) and (min-height:500px) {
@@ -4997,11 +4430,6 @@ body {
     }
     header.hero nav.filters {
         height: 70px
-    }
-    header.insights-hero aside.textarea {
-        align-items: unset;
-        display: inline-block;
-        padding: 280px 80px 95px calc(50% - 600px)
     }
     section.event-listing .listing article.event {
         width: calc(33.3333% - 30px)
@@ -5066,33 +4494,17 @@ body {
 }
 
 @media only screen and (min-width:1360px) {
-    header.primary .front-pane .menu-inline {
+    header.primary .navbar .menu-inline {
         display: inline-flex
     }
 }
 
 @media (min-width:1441px) {
-    header.primary .front-pane .menu-inline a {
+    header.primary .navbar .menu-inline a {
         padding-left: 20px;
         padding-right: 20px
     }
-    header.primary .front-pane .cta {
-        margin-right: 0;
-        padding-left: 40px
-    }
-    header.primary .front-pane .cta:before {
-        background: #343434;
-        content: "";
-        display: block;
-        margin: auto 0;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        position: absolute;
-        width: 1px;
-        height: 13px
-    }
-    header.primary .front-pane .menu-button {
+    header.primary .navbar .menu-button {
         display: none
     }
     section.media-float-textarea aside.media {
@@ -5143,7 +4555,6 @@ body {
         font-size: 26px;
         font-size: 1.625rem
     }
-    header.article-hero .textarea .title,
     header.contact-hero .title {
         font-size: 29px;
         font-size: 1.8125rem
@@ -5161,10 +4572,6 @@ body {
         font-size: 38px;
         font-size: 2.375rem
     }
-    header.insights-hero aside.textarea .title {
-        font-size: 29px;
-        font-size: 1.8125rem
-    }
     header.primary nav.menu-pane nav.menu li.item-lvl--2 {
         font-size: 16px;
         font-size: 1rem
@@ -5177,14 +4584,9 @@ body {
         font-size: 16px;
         font-size: 1rem
     }
-    header.service-hero ul.stats .value,
-    header.work-hero .title {
+    header.service-hero ul.stats .value {
         font-size: 29px;
         font-size: 1.8125rem
-    }
-    section.article-group .heading {
-        font-size: 26px;
-        font-size: 1.625rem
     }
     section.default-wysiwyg .main h1,
     section.default-wysiwyg .main h2 {
@@ -5442,37 +4844,11 @@ body {
         font-size: 14px;
         font-size: .875rem
     }
-    section.vacancy-listing .heading .title {
-        font-size: 29px;
-        font-size: 1.8125rem
-    }
-    section.vacancy-listing .heading .description {
-        font-size: 16px;
-        font-size: 1rem;
-        font-size: 14px;
-        font-size: .875rem
-    }
-    section.vacancy-listing .listing .whr-title {
-        font-size: 18px;
-        font-size: 1.125rem
-    }
-    section.vacancy-listing .cta-pane .title {
-        font-size: 26px;
-        font-size: 1.625rem
-    }
-    section.vacancy-listing .cta-pane .description {
-        font-size: 16px;
-        font-size: 1rem;
-        font-size: 14px;
-        font-size: .875rem
-    }
 }
 
 @media (max-width:767px) {
     header.hero .title br,
-    header.hero .title br:after,
-    header.work-hero .title br,
-    header.work-hero .title br:after {
+    header.hero .title br:after {
         content: " "
     }
 }
@@ -5490,9 +4866,6 @@ body {
 }
 
 @media (max-width:959px) {
-    section.article-group .buttons a {
-        min-width: 250px
-    }
     section.office-locations article.location a.button {
         color: transparent;
         font-size: 0;

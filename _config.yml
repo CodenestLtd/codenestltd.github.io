@@ -16,6 +16,15 @@ company:
       info: accounts@codenest.uk
 
 page:
+  about:
+    title: About Us
+    url: /about/
+  services:
+    title: Our Services
+    url: /services/
+  careers:
+    title: Careers
+    url: /careers/
   contact:
     title: Contact Us
     url: /contact-us/

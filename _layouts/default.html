@@ -28,12 +28,11 @@
   <![endif]-->
 </head>
   <body id="page-top" class="index">
-    <header class="primary">
 
+    <header class="primary">
       <!-- Navigation -->
       <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-          <!-- Brand and toggle get grouped for better mobile display -->
           <div class="navbar-header page-scroll">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
               <span class="sr-only">Toggle navigation</span>
@@ -41,7 +40,10 @@
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand page-scroll" href="/">
+          </div>
+          <!-- Logo -->
+          <div class="logo">
+            <a class="navbar-brand page-scroll" aria-label="{{ site.company.name }}" alt="{{ site.company.name }}" href="/">
               <img src="/images/companylogo.png" class="img-responsive img-centered" alt="{{ site.company.name }}" style="margin-top: -6px;">
             </a>
           </div>
@@ -53,19 +55,32 @@
                 <a href="#page-top"></a>
               </li>
               <li>
-                <a class="page-scroll" href="#about">About</a>
+                <a class="page-scroll" title="About {{ site.company.name }}" href="{{ site.page.about.url }}" target="_self">About</a>
               </li>
               <li>
-                <a class="page-scroll" href="#services">Services</a>
+                <a class="page-scroll" href="{{ site.page.services.url }}" title="Explore our services" target="_self">Services</a>
               </li>
               <li>
-                <a class="page-scroll" href="{{ site.page.contact.url }}">Contact</a>
+                <a class="page-scroll" href="{{ site.page.careers.url }}" title="Career opportunities at {{ site.company.name }}" target="_self"">Careers</a>
+              </li>
+              <li>
+                <a class="page-scroll" href="{{ site.page.contact.url }}" title="Contact Us at {{ site.company.name }}" target="_self"">Contact Us</a>
               </li>
             </ul>
           </div>
-          <!-- /.navbar-collapse -->
+
+          <!-- Menu button (tablet + mobile) -->
+          <div class="menu-button">
+            <div class="trigger">
+              <div class="action--open"><i></i><i></i><i></i></div>
+              <div class="action--exit"><i></i><i></i></div>
+            </div>
+          </div>
+
         </div>
-        <!-- /.container-fluid -->
+
+
+
       </nav>
     </header>
     <main class="base">
