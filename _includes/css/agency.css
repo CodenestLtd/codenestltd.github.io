@@ -223,7 +223,6 @@ fieldset[disabled] .btn-xl.active {
     font-family: {{ site.data.template.font.primary }};
     font-weight: 400;
     letter-spacing: 1px;
-    color: black;
     -webkit-transition: all ease .35s;
     -moz-transition: all ease .35s;
     transition: all ease .35s;
@@ -3609,7 +3608,6 @@ body {
     }
     header.primary .navbar {
         border-bottom: 0 none;
-        padding: 30px 0;
         border-bottom: 1px solid #eaeaea;
     }
     header.primary .navbar.-is-bg-transparent {
